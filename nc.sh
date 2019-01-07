@@ -18,7 +18,7 @@ netstat -ntpl
 
 # Server
 #!/bin/bash -x
-while true; do { echo -e "HTTP/1.1 200 OK\r\n$(date)\r\n\r\nhello from $(hostname) on $(date)" |  nc -vlp 8080; } done
+while true; do { echo -e "$(hostname):$(date)" |  nc -vlp 8080; } done
 
 
 #Tunnel
